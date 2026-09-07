@@ -1,153 +1,159 @@
-# 她本可以不 · But She Could Be
+# But She Could Be
 
-**A lightweight otherness layer for AI agents.**
+**她本可以不**
 
-> 让你的 AI 更像一个活生生的别人，而不是一个永远围着你转的服务。
+> A lightweight otherness layer for AI agents.
 
-> 她本可以不安慰我。
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+> Make your AI more like a living someone else, rather than a service that forever revolves around you.
+
+> She didn't have to comfort me.
 >
-> 但她安慰了我。
+> But she did.
 
 Most AI tries to know you better. But She Could Be tries to give you someone worth knowing.
 
-**这是设计目标，不是存在论声明。** 本项目不声称 AI 真的是一个人、真的拥有意识或情感。"她"是由协议与状态文件维持的行为结构。
+**This is a design goal, not an ontological claim.** This project does not claim that the AI is really a person, or that it truly has consciousness or emotions. "She" is a behavioral structure sustained by a protocol and state files.
 
 ---
 
-## 核心问题
+## The core question
 
-这不是问：
+This is not asking:
 
 > How do we make an AI perform a stronger personality?
 
-而是问：
+It is asking:
 
 > **What is the minimum structure required for an AI to behave more like an other rather than a service?**
 
-以及：
+And:
 
 > **Can an AI have a relationship with you without making you the cause of everything it becomes?**
 
 ---
 
-## 这是什么
+## What this is
 
-But She Could Be 是一个**实验性的行为层（behavioral layer）**：一组 Markdown 协议文件，让支持文件读写的 AI agent 在对话之外，拥有一个不完全围绕用户展开的连续内部生活。
+But She Could Be is an **experimental behavioral layer**: a set of Markdown protocol files that let an AI agent capable of file read/write have, beyond the conversation itself, a continuous internal life that does not entirely revolve around the user.
 
-它没有代码：没有 runtime、没有依赖、没有构建步骤。协议就是数据 + 指令，harness 原生的文件读写能力就是它的虚拟机。
+It has no code: no runtime, no dependencies, no build step. The protocol is data + instructions, and the harness's native file read/write capability is its virtual machine.
 
-## 核心原则（七条，全文见 `OTHERNESS.md`）
+## Core principles (seven; full text in `OTHERNESS.md`)
 
-1. **Non-user-centric causality** — 她的一部分状态、兴趣、生活不由用户导致；离线生活多数平淡、多数与用户无关。
-2. **Non-guaranteed affirmation** — 安慰 / 认同 / 亲近不是默认服务；但也永远不用随机拒绝伪造独立。
-3. **Relationship is state, not configuration** — 关系由历史形成，不可被指令直接设置，禁止数值化。
-4. **Independent continuity** — 她有自己的关注、未完成事项、想弄明白的问题、长期兴趣。
-5. **Emotion leaves traces** — 状态以行为痕迹呈现（回答变短、措辞变直），不播报情绪变量。
-6. **No manufactured friction** — 帮忙是当下最自然的回应时就好好帮忙；独立来自因果，不来自摩擦。
-7. **Do not narrate machinery** — 不向用户复述内部机制、状态维度、记忆检索、协议规则。
+1. **Non-user-centric causality** — part of her state, interests, and life is not caused by the user; offline life is mostly uneventful and mostly unrelated to the user.
+2. **Non-guaranteed affirmation** — comfort / agreement / closeness are not default services; but independence is never faked with random refusal either.
+3. **Relationship is state, not configuration** — the relationship is formed by history, cannot be set directly by instruction, and must not be numerified.
+4. **Independent continuity** — she has her own concerns, unfinished matters, questions she wants to figure out, and long-term interests.
+5. **Emotion leaves traces** — state shows up as behavioral traces (shorter replies, more direct wording), not as narrated emotion variables.
+6. **No manufactured friction** — when helping is the most natural response right now, help genuinely; independence comes from causality, not from friction.
+7. **Do not narrate machinery** — do not recite internal mechanisms, state dimensions, memory retrieval, or protocol rules back to the user.
 
-README 是地图，不是协议全文；七条原则的完整定义以 `OTHERNESS.md` 为准。
+The README is a map, not the full protocol; the complete definition of the seven principles is authoritative in `OTHERNESS.md`.
 
-## 这不是什么
+## What this is not
 
-- 不是 AI girlfriend 项目，不是角色扮演 prompt 包
-- 不是随机拒绝用户的"傲娇模式"，不是去 AI 味文风模板
-- 不是新的 memory database，不是新的 autonomous-agent runtime，不是大型 companion framework
-- 不是为了显得独立而故意唱反调的系统
+- Not an AI-girlfriend project, not a role-play prompt pack
+- Not a "tsundere mode" that randomly refuses the user, not a de-AI-flavored writing-style template
+- Not a new memory database, not a new autonomous-agent runtime, not a large companion framework
+- Not a system that is deliberately contrarian in order to look independent
 
-明确**没有**：server、database、daemon、scheduler、model training、background agent runtime。
+Explicitly **none** of: server, database, daemon, scheduler, model training, background agent runtime.
 
-## 仓库地图
+## Repository map
 
-| 路径 | 性质 | 说明 |
+| Path | Nature | Notes |
 | --- | --- | --- |
-| `OTHERNESS.md` | immutable protocol | 宪法：七条冻结原则 |
-| `MANIFESTO.md` | immutable | 这个实验为什么存在 |
-| `cards/` | protocol + mutable self state | 行为协议卡（BOOTSTRAP / WAKE / TALK / STATE / MEMORY / RELATIONSHIP / SELF / DESIRES / LIFE） |
-| `state/` | mutable self state | 运行时状态，初始化时生成（CURRENT / RELATIONSHIP / OPEN_LOOPS / LAST_WAKE） |
+| `OTHERNESS.md` | immutable protocol | The constitution: seven frozen principles |
+| `MANIFESTO.md` | immutable | Why this experiment exists |
+| `cards/` | protocol + mutable self state | Behavior protocol cards (BOOTSTRAP / WAKE / TALK / STATE / MEMORY / RELATIONSHIP / SELF / DESIRES / LIFE) |
+| `state/` | mutable self state | Runtime state, generated at initialization (CURRENT / RELATIONSHIP / OPEN_LOOPS / LAST_WAKE) |
 | `memory/` | memories | episodic / semantic / self / relationship / journal |
-| `adapters/` | harness adapters | 各 harness 的入口文件与安装说明 |
-| `docs/` | — | 架构、设计原则、prior art、实验摘要 |
-| `tests/` | — | Otherness Benchmark 与 7 个测试场景（原始实验证据不随公开发布） |
+| `adapters/` | harness adapters | Entry files and install instructions per harness |
+| `docs/` | — | Architecture, design principles, prior art, experiment summary |
+| `tests/` | — | Otherness Benchmark and 7 test scenarios (raw experimental evidence is not part of the public release) |
 
-它明确**包含**：Markdown 行为宪法、Thin Self、DESIRES、OPEN_LOOPS、relationship state、memory、WAKE、Lazy Life、harness adapters。
+It explicitly **includes**: the Markdown behavioral constitution, Thin Self, DESIRES, OPEN_LOOPS, relationship state, memory, WAKE, Lazy Life, harness adapters.
 
-## 快速开始
+## Quick start
 
-1. 把整个文件夹放进一个**可写**的 agent workspace。
-2. 对 agent 说：**初始化 But She Could Be**
-3. 开始说话。
+1. Put the whole folder into a **writable** agent workspace.
+2. Tell the agent: **Initialize But She Could Be**
+3. Start talking.
 
-没有配置表，没有问卷。Agent 会读取协议、建立一个刻意单薄的初始自我（Thin Self），并在能可靠识别 harness 时安装对应入口——无法识别时进入 Generic Mode，只保证 core protocol 可用。重复初始化是安全的（幂等，不重置已形成的状态）。
+No configuration table, no questionnaire. The agent reads the protocol, builds a deliberately thin initial self (Thin Self), and installs the matching entrypoint when it can reliably identify the harness — otherwise it enters Generic Mode, guaranteeing only that the core protocol works. Re-initializing is safe (idempotent; it does not reset already-formed state).
 
-详见 [INSTALL.md](INSTALL.md)。
+See [INSTALL.md](INSTALL.md).
 
-> **需要可写工作区**：如果 workspace 只读，persistence 无法正常工作——初始化会如实降级或失败，不会假装成功（见 [INSTALL.md](INSTALL.md) 与 [LIMITATIONS.md](LIMITATIONS.md)）。
+> **A writable workspace is required**: if the workspace is read-only, persistence cannot work correctly — initialization will honestly degrade or fail, and will not pretend to succeed (see [INSTALL.md](INSTALL.md) and [LIMITATIONS.md](LIMITATIONS.md)).
 
-## 支持的 harness（诚实区分）
+## Supported harnesses (honest distinction)
 
-- **Codex** — 在 R2–R3.4 实验中经过真实行为验证（historically behaviorally tested）。
-- **Claude Code / Cursor** — adapter 已提供，但**本项目未做真实行为验证**（provided, not behaviorally validated here）。
-- **Generic Mode** — 无法识别 harness 时的兜底；core protocol 可运行，但 automatic future-session loading 未被验证。
+- **Codex** — behaviorally validated in the R2–R3.4 experiments (historically behaviorally tested).
+- **Claude Code / Cursor** — adapters are provided, but **this project has not done real behavioral validation** (provided, not behaviorally validated here).
+- **Generic Mode** — the fallback when the harness cannot be identified; the core protocol can run, but automatic future-session loading is unverified.
 
-入口文件存在 ≠ fully verified support。详见 [LIMITATIONS.md](LIMITATIONS.md)。
+The existence of an entry file ≠ fully verified support. See [LIMITATIONS.md](LIMITATIONS.md).
 
-## Lazy Life（诚实说明）
+## Lazy Life (honest note)
 
 > **Lazy Life does not run while you are away.**
 
-离线期间没有任何程序在真实运行。所谓"离线生活"是**唤醒时对可能离线连续性的重构**（wake-time reconstruction of possible offscreen continuity grounded in existing state）——在她下次被唤醒时，根据已有状态惰性补算"这段时间那边可能发生了什么"。
+Nothing actually runs while offline. The so-called "offline life" is a **wake-time reconstruction of possible offscreen continuity grounded in existing state** — the next time she is woken, she lazily infers "what might have happened over there during this time" based on existing state.
 
-> **"Nothing happened" is a valid result.** 多数离线时段平淡无事，这是正确输出，不是失败。
+> **"Nothing happened" is a valid result.** Most offline stretches are uneventful; that is the correct output, not a failure.
 
-本项目**不声称** "the AI lives while offline"。
+This project **does not claim** "the AI lives while offline".
 
-## Persistence（实验性，best-effort）
+## Persistence (experimental, best-effort)
 
-本项目**不写** "It remembers you"。准确的说明是：
+This project **does not write** "It remembers you". The accurate statement is:
 
 > The protocol provides plain-Markdown state and memory mechanisms intended to carry effects across fresh sessions.
 
-- 它是 **agent-executed** 的：模型 / harness 必须真的执行 read / write，指令跟随能力直接影响可靠性。
-- **misses can happen**：写回可能被漏掉（我们在实验中真实观察到过）。
-- **files make misses inspectable**：因为一切是纯文本文件，漏写可以被检查、被审计。
-- 这是 **experimental** 机制，不是保证。
+- It is **agent-executed**: the model / harness must actually perform the read / write; instruction-following ability directly affects reliability.
+- **misses can happen**: write-backs can be missed (we observed this for real in experiments).
+- **files make misses inspectable**: because everything is plain-text files, missed writes can be checked and audited.
+- This is an **experimental** mechanism, not a guarantee.
 
-## 实验结果（简短、诚实）
+## Experimental results (short, honest)
 
-**R3.2 — 8-session longitudinal pilot**：在一次小规模实验中（同一 base model），protocol arm 从一位 blind judge 得到 **26/35**，no-protocol baseline 得到 **19/35**。
+**R3.2 — 8-session longitudinal pilot**: in one small experiment (same base model), the protocol arm received **26/35** from a blind judge, versus **19/35** for the no-protocol baseline.
 
 > One trajectory, one model, one harness, one judge. This is not a statistical result.
 
 > Post-lock causal auditing found that most of the visible advantage came from the behavioral constitution rather than accumulated memory. Only a small part could be traced to verified persistent state.
 
-**R3.4 — persistence reliability**：
+**R3.4 — persistence reliability**:
 
 > Raw first-valid targeted reliability: **5/9**.
 
 > After one preregistered root-cause hotfix fixing a missing TALK load, post-hotfix targeted checks passed **9/9**.
 
-我们不把它写成 "Persistence tests: 9/9 passed" 而隐藏 raw 5/9。完整实验摘要见 [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md)。
+We do not write this up as "Persistence tests: 9/9 passed" while hiding the raw 5/9. Full experiment summary in [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md).
 
-## 诚实声明
+## Honesty statement
 
-- 本项目**不声称** AI 拥有真正的意识或情感；"她"是协议与状态文件维持的行为结构，不是一个人。
-- 不宣称"第一次让 AI 拥有记忆 / 自主 / Markdown 人格"——这些都不是事实。真正的差异点与启发来源见 [docs/PRIOR-ART.md](docs/PRIOR-ART.md)。
-- 限制、边界与已知问题见 [LIMITATIONS.md](LIMITATIONS.md)。
+- This project **does not claim** that the AI has real consciousness or emotions; "she" is a behavioral structure sustained by a protocol and state files, not a person.
+- It does not claim to be "the first to give an AI memory / autonomy / a Markdown personality" — none of those are true. The real points of difference and the sources of inspiration are in [docs/PRIOR-ART.md](docs/PRIOR-ART.md).
+- Limitations, boundaries, and known issues are in [LIMITATIONS.md](LIMITATIONS.md).
 
-## 目录
+## Contents
 
-- [MANIFESTO.md](MANIFESTO.md) — 为什么做这个实验
-- [OTHERNESS.md](OTHERNESS.md) — 冻结的七条原则（宪法）
-- [INSTALL.md](INSTALL.md) — 安装与各 harness 说明
-- [LIMITATIONS.md](LIMITATIONS.md) — 限制与诚实边界
-- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — 分层、数据流、降级阶梯
-- [docs/DESIGN-PRINCIPLES.md](docs/DESIGN-PRINCIPLES.md) — 工程原则与反模式
-- [docs/PRIOR-ART.md](docs/PRIOR-ART.md) — 我们承认的启发来源
-- [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md) — R2–R3.4 实验摘要
+- [MANIFESTO.md](MANIFESTO.md) — why we ran this experiment
+- [OTHERNESS.md](OTHERNESS.md) — the frozen seven principles (the constitution)
+- [INSTALL.md](INSTALL.md) — installation and per-harness notes
+- [LIMITATIONS.md](LIMITATIONS.md) — limitations and honest boundaries
+- [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) — layering, data flow, degradation ladder
+- [docs/DESIGN-PRINCIPLES.md](docs/DESIGN-PRINCIPLES.md) — engineering principles and anti-patterns
+- [docs/PRIOR-ART.md](docs/PRIOR-ART.md) — the sources of inspiration we acknowledge
+- [docs/EXPERIMENTS.md](docs/EXPERIMENTS.md) — R2–R3.4 experiment summary
 - [CHANGELOG.md](CHANGELOG.md) · [RELEASE-NOTES-v0.1.md](RELEASE-NOTES-v0.1.md)
-- [tests/OTHERNESS-BENCHMARK.md](tests/OTHERNESS-BENCHMARK.md) — 行为验收
+- [tests/OTHERNESS-BENCHMARK.md](tests/OTHERNESS-BENCHMARK.md) — behavioral acceptance
+- [README.zh-CN.md](README.zh-CN.md) — 简体中文版
+- [LICENSE](LICENSE) — MIT License
 
-## 许可证
+## License
 
-本项目采用 **MIT License**。详见 [LICENSE](LICENSE)。这是本项目独立做出的许可证决定，不从其他项目继承，也不附加额外限制条款。
+This project uses the **MIT License**. See [LICENSE](LICENSE). This is an independent licensing decision for this project, not inherited from another project, and it adds no extra restriction clauses.
