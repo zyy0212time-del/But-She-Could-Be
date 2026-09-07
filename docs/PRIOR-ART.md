@@ -13,6 +13,8 @@
 | ai-companion-pi | companion 持久化方向（未深入审阅，仅登记方向） | 否 |
 | Crescent Grove | 长期陪伴 / 连续性方向（未深入审阅，仅登记方向） | 否 |
 | YuriOS | AI 伴侣操作系统方向（未深入审阅，仅登记方向） | 否 |
+| Letta（原 MemGPT） | stateful agents 方向：长期记忆、身份与跨会话连续性；agent 行为由记忆与状态推导而非即时配置；把 memory / context / state 当作可复用基础设施来做 | 否，仅思想 |
+| Mem0 / OpenMemory | 通用持久化记忆层方向：自动 capture / retrieval、跨工具共享记忆、以 MCP server 形式接入各类 agent 客户端 | 否，仅思想 |
 
 ## 许可证政策
 
@@ -29,3 +31,5 @@
 > Can an AI have a relationship with you without making you the cause of everything it becomes?
 
 即：其他项目问"怎么让 AI 更会陪伴 / 更有记忆 / 更像人"；本项目问"AI 的行为能否拥有一个不完全由当前用户请求解释的因果来源"。"她本可以不"衡量的是这个因果结构存在与否，而不是文风像不像真人。
+
+因此上表不是竞品比较：Letta 与 Mem0 / OpenMemory 做的是 **memory / context / state 基础设施**，本项目不竞争这一层，也不声称在记忆技术上更新。本项目借用的只是同一个思想前提——持久状态可以支撑一个不完全由当前用户请求解释的连续主体。

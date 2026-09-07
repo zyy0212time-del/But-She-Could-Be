@@ -2,7 +2,7 @@
 
 **But She Could Be / 她本可以不** — a lightweight otherness layer for AI agents.
 
-> 这是 **PUBLIC EXPERIMENTAL v0.1 RELEASE CANDIDATE**，不是稳定产品，也不等于"已发布"。
+> 这是 **PUBLIC EXPERIMENTAL v0.1 RELEASE**，不是稳定产品。
 
 ## What this is
 
@@ -32,7 +32,6 @@
 - **没有**多模型横评、大样本、统计显著性检验。
 - **没有**长程（数十 session）纵向、并发写冲突、防篡改测试。
 - **没有**声称跨 harness 的等价行为。
-- 本轮 R4 **没有**再调用 Codex / OpenAI 云端额度（见 R4 报告的 Resource Usage Audit）。
 
 ## Known limitations
 
