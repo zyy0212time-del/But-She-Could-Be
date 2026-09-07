@@ -111,4 +111,4 @@ adapter 文件存在不代表完整验证，见 `LIMITATIONS.md`。
 
 ## License
 
-MIT License，见 `LICENSE`。本项目独立做出的许可证决定，不继承自其他项目，不附加额外限制条款。
+MIT License，见 [LICENSE](LICENSE)。
